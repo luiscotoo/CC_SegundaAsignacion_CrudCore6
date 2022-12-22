@@ -1,0 +1,37 @@
+﻿@model List<modelEntity.Ingeniero>
+@{
+    ViewBag.Title = "Delete";
+}
+<br />
+<br />
+<br />
+<hr>
+<div class="container text-center text-light rounded bg-danger p-3 mb-5">
+    <h1>
+        @ViewBag.mensajeInicio
+    </h1>
+</div>
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form-actions col-md-offset-2 text-center">
+            <input class="btn btn-danger me-5 btn-lg" type="submit" name="btneliminar" value="Eliminar" />|
+            @Html.ActionLink("Regresar al Listado", "Inicio")
+        </div>
+    </div>
+
+}
+<div class="container text-center text-danger">
+    <h1>
+        @ViewBag.mensajeError
+    </h1>
+
+</div>
+<div class="container text-center text-success">
+    <h1>
+        @ViewBag.mensajeExito
+    </h1>
+
+</div>
+
+

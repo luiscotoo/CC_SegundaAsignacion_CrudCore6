@@ -1,0 +1,38 @@
+﻿
+@model List<modelEntity.Ingeniero>
+@{
+    ViewBag.Title = "Inicio";
+}
+<br />
+<br />
+<br />
+<div class="container-fluid">
+    <div>
+        <a class="btn btn-primary" href="~/Ingeniero/create">Nuevo</a>
+    </div>
+    <hr />
+    <table class="table">
+        <tr class="btn-primary">
+            <th>Codigo</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>FechaNac</th>
+            <th>Altura</th>
+            <th colspan="2">Operaciones</th>
+        </tr>
+        @foreach (var objIngeniero in Model)
+        {
+            <tr>
+                <td>@objIngeniero.Id</td>
+                <td>@objIngeniero.Nombre</td>
+                <td>@objIngeniero.Edad</td>
+                <td>@objIngeniero.Fecha_nac</td>
+                <td>@objIngeniero.Altura</td>
+                <!-- <td><a class="btn btn-success" href="~/Ingeniero/find/@objIngeniero.Id">Ver</a></td> -->
+                <td><a class="btn btn-success" href="~/Ingeniero/update/@objIngeniero.Id">Actualizar</a></td>
+                <td><a class="btn btn-danger" href="~/Ingeniero/delete/@objIngeniero.Id">Eliminar</a></td>
+            </tr>
+        }
+
+    </table>
+</div>
